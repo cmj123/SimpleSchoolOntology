@@ -149,6 +149,104 @@
     <owl:Class rdf:about="http://www.simpleschoolontology.com#Student">
         <rdfs:subClassOf rdf:resource="http://www.simpleschoolontology.com#Person"/>
     </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.simpleschoolontology.com#CS101 -->
+
+    <owl:NamedIndividual rdf:about="http://www.simpleschoolontology.com#CS101">
+        <rdf:type rdf:resource="http://www.simpleschoolontology.com#CSModule"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.simpleschoolontology.com#CS103 -->
+
+    <owl:NamedIndividual rdf:about="http://www.simpleschoolontology.com#CS103">
+        <rdf:type rdf:resource="http://www.simpleschoolontology.com#CSModule"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.simpleschoolontology.com#Lecture1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.simpleschoolontology.com#Lecture1">
+        <rdf:type rdf:resource="http://www.simpleschoolontology.com#Lecturer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.simpleschoolontology.com#Lecturer2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.simpleschoolontology.com#Lecturer2">
+        <rdf:type rdf:resource="http://www.simpleschoolontology.com#Lecturer"/>
+        <Teaches rdf:resource="http://www.simpleschoolontology.com#CS101"/>
+        <Teaches rdf:resource="http://www.simpleschoolontology.com#CS103"/>
+        <FirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Esuabom</FirstName>
+        <LastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dijemeni</LastName>
+        <StaffID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">417686</StaffID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.simpleschoolontology.com#M201 -->
+
+    <owl:NamedIndividual rdf:about="http://www.simpleschoolontology.com#M201">
+        <rdf:type rdf:resource="http://www.simpleschoolontology.com#CSModule"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.simpleschoolontology.com#M204 -->
+
+    <owl:NamedIndividual rdf:about="http://www.simpleschoolontology.com#M204">
+        <rdf:type rdf:resource="http://www.simpleschoolontology.com#CSModule"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.simpleschoolontology.com#Student1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.simpleschoolontology.com#Student1">
+        <rdf:type rdf:resource="http://www.simpleschoolontology.com#Student"/>
+        <Studies rdf:resource="http://www.simpleschoolontology.com#CS101"/>
+        <Studies rdf:resource="http://www.simpleschoolontology.com#CS103"/>
+        <Studies rdf:resource="http://www.simpleschoolontology.com#M201"/>
+        <Studies rdf:resource="http://www.simpleschoolontology.com#M204"/>
+        <FirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">Moses</FirstName>
+        <LastName rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">Jesus</LastName>
+        <StudentID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">266814</StudentID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.simpleschoolontology.com#Student2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.simpleschoolontology.com#Student2">
+        <rdf:type rdf:resource="http://www.simpleschoolontology.com#Student"/>
+        <Studies rdf:resource="http://www.simpleschoolontology.com#CS101"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.simpleschoolontology.com#Student3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.simpleschoolontology.com#Student3">
+        <rdf:type rdf:resource="http://www.simpleschoolontology.com#Student"/>
+        <Studies rdf:resource="http://www.simpleschoolontology.com#CS103"/>
+        <Studies rdf:resource="http://www.simpleschoolontology.com#M204"/>
+    </owl:NamedIndividual>
 </rdf:RDF>
 
 
