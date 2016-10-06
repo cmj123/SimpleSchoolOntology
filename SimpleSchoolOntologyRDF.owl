@@ -1,0 +1,157 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.simpleschoolontology.com#"
+     xml:base="http://www.simpleschoolontology.com"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.simpleschoolontology.com">
+        <owl:versionIRI rdf:resource="http://www.simpleschoolontology.com/0.01"/>
+        <rdfs:comment>This ontology is a simple school ontology for learning purposes.</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.simpleschoolontology.com#Studies -->
+
+    <owl:ObjectProperty rdf:about="http://www.simpleschoolontology.com#Studies">
+        <rdfs:domain rdf:resource="http://www.simpleschoolontology.com#Student"/>
+        <rdfs:range rdf:resource="http://www.simpleschoolontology.com#Module"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.simpleschoolontology.com#Teaches -->
+
+    <owl:ObjectProperty rdf:about="http://www.simpleschoolontology.com#Teaches">
+        <rdfs:domain rdf:resource="http://www.simpleschoolontology.com#Lecturer"/>
+        <rdfs:range rdf:resource="http://www.simpleschoolontology.com#Module"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.simpleschoolontology.com#FirstName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.simpleschoolontology.com#FirstName">
+        <rdfs:domain rdf:resource="http://www.simpleschoolontology.com#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.simpleschoolontology.com#LastName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.simpleschoolontology.com#LastName">
+        <rdfs:domain rdf:resource="http://www.simpleschoolontology.com#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.simpleschoolontology.com#StaffID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.simpleschoolontology.com#StaffID">
+        <rdfs:domain rdf:resource="http://www.simpleschoolontology.com#Lecturer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.simpleschoolontology.com#StudentID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.simpleschoolontology.com#StudentID">
+        <rdfs:domain rdf:resource="http://www.simpleschoolontology.com#Student"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.simpleschoolontology.com#CSModule -->
+
+    <owl:Class rdf:about="http://www.simpleschoolontology.com#CSModule">
+        <rdfs:subClassOf rdf:resource="http://www.simpleschoolontology.com#Module"/>
+        <owl:disjointWith rdf:resource="http://www.simpleschoolontology.com#Lecturer"/>
+        <owl:disjointWith rdf:resource="http://www.simpleschoolontology.com#MathModule"/>
+        <owl:disjointWith rdf:resource="http://www.simpleschoolontology.com#Student"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.simpleschoolontology.com#Lecturer -->
+
+    <owl:Class rdf:about="http://www.simpleschoolontology.com#Lecturer">
+        <rdfs:subClassOf rdf:resource="http://www.simpleschoolontology.com#Person"/>
+        <owl:disjointWith rdf:resource="http://www.simpleschoolontology.com#MathModule"/>
+        <owl:disjointWith rdf:resource="http://www.simpleschoolontology.com#Student"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.simpleschoolontology.com#MathModule -->
+
+    <owl:Class rdf:about="http://www.simpleschoolontology.com#MathModule">
+        <rdfs:subClassOf rdf:resource="http://www.simpleschoolontology.com#Module"/>
+        <owl:disjointWith rdf:resource="http://www.simpleschoolontology.com#Student"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.simpleschoolontology.com#Module -->
+
+    <owl:Class rdf:about="http://www.simpleschoolontology.com#Module">
+        <owl:disjointWith rdf:resource="http://www.simpleschoolontology.com#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.simpleschoolontology.com#Person -->
+
+    <owl:Class rdf:about="http://www.simpleschoolontology.com#Person"/>
+    
+
+
+    <!-- http://www.simpleschoolontology.com#Student -->
+
+    <owl:Class rdf:about="http://www.simpleschoolontology.com#Student">
+        <rdfs:subClassOf rdf:resource="http://www.simpleschoolontology.com#Person"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi -->
+
